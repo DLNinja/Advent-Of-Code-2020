@@ -4,9 +4,7 @@ using namespace std;
 ifstream fin("date.in");
 ofstream fout("date.out");
 
-string line;
 int n = 1, nr, a[202];
-long long cnt;
 
 map<int, long long> m;
 
@@ -48,9 +46,9 @@ int main(){
     }
     sort(a, a+n);
     a[n] = a[n-1] + 3;
-    cout<<"Part 1: "<<countDiff(1) * countDiff(3)<<endl;
+    fout<<"Part 1: "<<countDiff(1) * countDiff(3)<<endl;
     ///Part 2 takes a while to return the result
     /// 'cause of complexity 3^n
-    cout<<"Part 2: "<<ways(0);
+    fout<<"Part 2: "<<ways(0);
     return 0;
 }
