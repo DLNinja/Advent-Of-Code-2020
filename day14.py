@@ -1,8 +1,6 @@
 nums = open('input.txt', 'r').readlines()
 nums = [i.replace('\n', ' ') for i in nums]
 
-mask = ""
-
 def part1():
     memory = {}
     for i in nums:
@@ -23,18 +21,6 @@ def part1():
             memory[index] = int(nr, 2)
     return sum(memory[y] for y in memory)
 
-
-#print(part1())
-
-# def adresses(index, s, nr):
-#     if index < len(nr):
-#         line = []
-#         if nr[index] == "X":
-#             f
-#             line.append(s+"0")
-#             line.append(s+)
-#         else:
-
 def part2():
     memory = {}
     for i in nums:
@@ -43,7 +29,6 @@ def part2():
             mask = mask[:-1]
         else:
             index = int((i.split('[')[1].split(']'))[0])
-            number = int(i.split(' = ')[1])
             adress = int(i.split(' = ')[1])
             number = bin(index)[2:]
             while len(number) != len(mask):
